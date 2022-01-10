@@ -1,18 +1,30 @@
 import React, { useState } from "react";
 import Navigation from "../Navigation";
 
-function Header() {
-    cosnt [categories] = useState(["about", "portfolio", "contact", "resume"]);
-
-    const [currentCategory, setCurrentCategory] = useState(categories[0]);
+function Header(props) {
+    const {
+        aboutSelected,
+        setAboutSelected,
+        portfolioSelected,
+        setPortfolioSelected,
+        contactSelected,
+        setContactSelected,
+        resumeSelected,
+        setResumeSelected
+    } = props;
 
     return (
         <header>
             <h2>Mark Marsala's React Portfolio</h2>
             <Navigation
-                categories={categories}
-                setCurrentCategory={setCurrentCategory}
-                currentCategory={currentCategory}
+                aboutSelected={aboutSelected}
+                setAboutSelected={setAboutSelected}
+                portfolioSelected={portfolioSelected}
+                setPortfolioSelected={setPortfolioSelected}
+                contactSelected={contactSelected}
+                setContactSelected={setContactSelected}
+                resumeSelected={resumeSelected}
+                setResumeSelected={setResumeSelected}
             ></Navigation>
         </header>
     );

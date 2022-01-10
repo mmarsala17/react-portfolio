@@ -3,40 +3,70 @@ import { capitalizeFirstLetter } from "../../utils/helpers";
 
 function Navigation(props) {
 
-    const categories = ["about", "portfolio", "contact", "resume"];
+    const categories = {
+        aboutSelected,
+        setAboutSelected,
+        portfolioSelected,
+        setPortfolioSelected,
+        contactSelected,
+        setContactSelected,
+        resumeSelected,
+        setResumeSelected,
+    } = props;
 
     return (
             <nav>
                 
                 <ul className="flex-row">
-                  {categories.map((category) => (
-                      <li className="mx-2" key= {category}>
-                          <a href={"#" + category} className="mx-2">
-                              {capitalizeFirstLetter(category)}
-                          </a>
-                      </li>
-                  ))}
-
-                  {/* <li className="mx-2">
-                  <a data-testid="about" href="#about">
-                    About me
-                  </a>
-                  </li>}
+                    <li className="mx-2">
+                        <span
+                        onClick={() => (
+                            setAboutSelected(true),
+                            setPortfolioSelected(false),
+                            setContactSelected(false),
+                            setResumeSelected(false),
+                        )}
+                        >
+                            About Me
+                        </span>
+                    </li>
+                 
                   <li className="mx-2">
-                    <a data-testid ="portfolio" href="#portfolio">
-                    Portfolio
-                    </a>
+                      <span
+                      onClick={() => (
+                          setAboutSelected(false),
+                          setPortfolioSelected(true),
+                          setContactSelected(false),
+                          setResumeSelected(false),
+                      )}
+                      >
+                          Portfolio
+                      </span>
                   </li>
                   <li classNane="mx-2">
-                    <a data-testid="contact" href="#contact">
+                        <span
+                            onClick={() => (
+                                setAboutSelected(false),
+                                setPortfolioSelected(false),
+                                setContactSelected(true),
+                                setResumeSelected(false)
+                            )}
+                            >
                         Contact
-                    </a>
+                    </span>
                   </li>
                   <li className="mx-2">
-                  <a data-testid="resume" href="#resume">
+                      <span
+                            onClick={() => (
+                                () => setAboutSelected(false),
+                                setPortfolioSelected(false),
+                                setContactSelected(false),
+                                setResumeSelected(true)
+                            )}
+                            >
                     Resume
-                  </a>
-                  </li> */}
+                  </span>
+                  </li>
                 </ul>
             </nav>
     );
