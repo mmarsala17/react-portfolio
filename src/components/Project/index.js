@@ -1,44 +1,33 @@
 import React from "react";
+import Card from "react-Bootstrap/Card";
 
-function Project() {
-    const projects = [
-        {
-            name: "The Local Queen",
-            description:
-             "This is your way to dine exactly the perfect brewery for you to go to in Charlotte, NC",
-            image: "Screenshot-2021-09-22-172311.png",
-            technologies:
-                "HTML, CSS, API, Bootstrap",
-                github: "https://github.com/bdiaz28/Project-1v3",
-                deployed: "https://bdiaz28.github.io/Project-1v3/"
-        },
-        {
-            name: "Mystery Tunes",
-            description: "The perfect user generated music playlist",
-            image: "Screenshot-2021-11-14-220903.png",
-            technologies: 
-            "HTML, CSS, Handlebars, JS, MySQL, Heroku",
-            github: "https://github.com/kee43093/Random-PlayList-Generator",
-            deployed: "https://final-random-playlist.herokuapp.com/"
-
-        }
-    ];
+function Project(props) {
+	const currentProject = useState(props)[0].projects;
+	const name = currentProject.name;
+	const description = currentProject.description;
+	const image = currentProject.image;
+	const appLink = currentProject.deployed;
+	const gitLink = currentProject.github
 
     return (
-        <section>
-            <ul className="flex-row">
-                <li>Project 1</li>
-                <li>Project 2</li>
-            </ul>
-            <ul className="flex-row">
-                <li>Project 3</li>
-                <li>Project 4</li>
-            </ul>
-            <ul className="flex-row">
-                <li>Project 5</li>
-                <li>Project 6</li>
-            </ul>
-        </section>
+        <Card style={{ width: "18rem" }}>
+        <Card.Img
+            variant="top"
+            src={require(`../../assets/images/${image}`)}
+            className="card-image"
+        />
+        <Card.Body>
+            <Card.Title className="card-title">{name}</Card.Title>
+            <Card.Text className="card-text">{description}</Card.Text>
+            <Card.Link href={appLink} target="_blank">
+                App Link
+            </Card.Link>
+            <br></br>
+            <Card.Link href={gitLink} target="_blank">
+                Github Link
+            </Card.Link>
+        </Card.Body>
+    </Card>
     );
 }
 

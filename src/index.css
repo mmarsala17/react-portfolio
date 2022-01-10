@@ -93,8 +93,9 @@ a:hover {
 header {
     background: var(--secondary);
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 	padding: 1rem;
+    text-align: center;
 }
 
 header a {
@@ -181,7 +182,7 @@ textarea {
 
 .flex-row {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .space-between {
@@ -341,3 +342,27 @@ a {
 .bottom-spacing {
     margin-bottom: var(--spacing-five);
 }
+
+.card {
+	width: 25%;
+	text-align: center;
+	/* padding: 3rem; */
+}
+
+.card-title {
+	font-size: 1.5rem;
+}
+
+.card-text {
+	font-size: 0.75rem;
+	height: 10rem;
+}
+
+.card-image {
+	max-width: 300px;
+	max-height: 150px;
+}
+
+.padding {
+	padding: 50px;
+} 
