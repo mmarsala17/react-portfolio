@@ -8,7 +8,7 @@ function Navigation(props) {
     return (
             <nav className="tabs">
                 
-                <ul className="flex-row">
+                <ul className="flex-row mobile-view">
                     <li className={currentTab == "about" ? "mx-2 navActive" : "mx-2"}>
                         <span onClick={() => setCurrentTab("about")}>About Me</span>
                     </li>
