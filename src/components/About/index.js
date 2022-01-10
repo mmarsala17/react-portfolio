@@ -3,8 +3,8 @@ import React from "react";
 function About() {
     return (
         <section>
-     <div className="center page-header" id="about">
-         About Me
+     <div className="center" id="about">
+         <h1 className="page-header">About Me</h1>
      </div>
      <div className="center">
          <img

@@ -6,7 +6,7 @@ function Navigation(props) {
    const { currentTab, setCurrentTab } = props;
 
     return (
-            <nav>
+            <nav className="tabs">
                 
                 <ul className="flex-row">
                     <li className={currentTab == "about" ? "mx-2 navActive" : "mx-2"}>
