@@ -18,11 +18,11 @@ function App() {
         case "about":
             return <About></About>;
         case "portfolio":
-            return <Portfolio></Portfolio>;
+            return <Portfolio />;
         case "contact": 
-            return <Contact></Contact>;
+            return <Contact />;
         case "resume":
-            return <Resume></Resume>;
+            return <Resume />;
         default:
             return null;
     }
