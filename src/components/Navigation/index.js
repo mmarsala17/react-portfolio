@@ -3,23 +3,14 @@ import { capitalizeFirstLetter } from "../../utils/helpers";
 
 function Navigation(props) {
 
-    const categories = {
-        aboutSelected,
-        setAboutSelected,
-        portfolioSelected,
-        setPortfolioSelected,
-        contactSelected,
-        setContactSelected,
-        resumeSelected,
-        setResumeSelected,
-    } = props;
+   const { currentTab, setCurrentTab } = props;
 
     return (
             <nav>
                 
                 <ul className="flex-row">
                     <li className="mx-2">
-                        <span
+                        {/* <span
                         onClick={() => (
                             setAboutSelected(true),
                             setPortfolioSelected(false),
@@ -28,11 +19,12 @@ function Navigation(props) {
                         )}
                         >
                             About Me
-                        </span>
+                        </span> */}
+                        <span onClick={() => setCurrentTab("about")}>About Mee</span>
                     </li>
                  
                   <li className="mx-2">
-                      <span
+                      {/* <span
                       onClick={() => (
                           setAboutSelected(false),
                           setPortfolioSelected(true),
@@ -41,10 +33,11 @@ function Navigation(props) {
                       )}
                       >
                           Portfolio
-                      </span>
+                      </span> */}
+                      <span onClick={() => setCurrentTab("portfolio")}>Portfolio</span>
                   </li>
                   <li classNane="mx-2">
-                        <span
+                        {/* <span
                             onClick={() => (
                                 setAboutSelected(false),
                                 setPortfolioSelected(false),
@@ -53,10 +46,11 @@ function Navigation(props) {
                             )}
                             >
                         Contact
-                    </span>
+                            </span> */}
+                            <span onClick={() => setCurrentTab("contact")}>Contact</span>
                   </li>
                   <li className="mx-2">
-                      <span
+                      {/* <span
                             onClick={() => (
                                 () => setAboutSelected(false),
                                 setPortfolioSelected(false),
@@ -65,7 +59,8 @@ function Navigation(props) {
                             )}
                             >
                     Resume
-                  </span>
+                            </span> */}
+                            <span onClick={() => setCurrentTab("resume")}>Resume</span>
                   </li>
                 </ul>
             </nav>

@@ -11,21 +11,10 @@ import Resume from "./components/Resume";
 import { useState } from "react";
 
 function App() {
-    const [aboutSelected, setAboutSelected] = useState(true);
-    const[portfolioSelected, setPortfolioSelected] = useState(false);
-    const [contactSelected, setContactSelected] = useState(false);
-    const [resumeSelected, setResumeSelected] = useState(false);
+    const [currentTab, setCurrentTab] = useState("about");
 
     const renderTab = () => {
-        if (aboutSelected) {
-            return <About></About>;
-        } else if (portfolioSelected) {
-            return <Portfolio></Portfolio>;
-        } else if (contactSelected) {
-            return <Contact></Contact>;
-        } else {
-            return <Resume></Resume>;
-        }
+    
     };
     return (
         <div>
