@@ -2,8 +2,6 @@ import React, { useEffect } from "react";
 
 function Navigation() {
     return (
-        <header>
-            <h2>Mark Marsala's React Portfolio</h2>
             <nav>
                 
                 <ul className="flex-row">
@@ -13,7 +11,6 @@ function Navigation() {
                     <li className="mx-2">Resume</li>
                 </ul>
             </nav>
-        </header>
     );
 }
 
