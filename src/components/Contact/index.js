@@ -33,10 +33,14 @@ function Contact() {
     }
     return (
         <section>
-            <h2>Contact</h2>
+            <div className="center">
+            <h2 className="page-header">Contact</h2>
+            </div>
+            <div>
             <form id="contact-form">
                 <div>
                     <label htmlFor="name">Name:</label>
+                    <br></br>
                     <input
                         type="text"
                         defaultValue={name}
@@ -46,6 +50,7 @@ function Contact() {
                 </div>
                 <div>
                     <label htmlFor="email">Email address:</label>
+                    <br></br>
                     <input type="email"
                     defaultValue={email}
                     name="email"
@@ -54,6 +59,7 @@ function Contact() {
                 </div>
                 <div>
                     <label htmlFor="message">Message</label>
+                    <br></br>
                     <textarea
                         name="message"
                         defaultValue={message}
@@ -68,6 +74,7 @@ function Contact() {
                 )}
                 <button type="submit">Submit</button>
             </form>
+            </div>
         </section>
     );
 }
