@@ -2,8 +2,12 @@ import React from "react";
 
 function Footer() {
     return (
-        <footer>
-            <h1> Footer Section</h1>
+        <footer className="footer">
+            <div className="footer">
+                <a href="https://github.com/mmarsala17" target="_blank">
+                    Github
+                </a>
+            </div>
         </footer>
     );
 }

@@ -23,10 +23,22 @@ function Project() {
 
         }
     ];
-    
+
     return (
         <section>
             <h3>Project Section</h3>
+            <ul className="flex-row">
+                <li>Project 1</li>
+                <li>Project 2</li>
+            </ul>
+            <ul className="flex-row">
+                <li>Project 3</li>
+                <li>Project 4</li>
+            </ul>
+            <ul className="flex-row">
+                <li>Project 5</li>
+                <li>Project 6</li>
+            </ul>
         </section>
     );
 }

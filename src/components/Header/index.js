@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React  from "react";
 import Navigation from "../Navigation";
 
 function Header(props) {
     const { currentTab, setCurrentTab } = props;
 
     return (
-        <header>
+        <header className="header">
             <h2>Mark Marsala's React Portfolio</h2>
             <Navigation
                 currentTab={currentTab}

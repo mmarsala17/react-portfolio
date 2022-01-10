@@ -14,19 +14,24 @@ function App() {
     const [currentTab, setCurrentTab] = useState("about");
 
     const renderTab = () => {
-    
+    switch (currentTab) {
+        case "about":
+            return <About></About>;
+        case "portfolio":
+            return <Portfolio></Portfolio>;
+        case "contact": 
+            return <Contact></Contact>;
+        case "resume":
+            return <Resume></Resume>;
+        default:
+            return null;
+    }
     };
     return (
         <div>
             <Header
-                aboutSelected={aboutSelected}
-                setAboutSelected={setAboutSelected}
-                portfolioSelected={portfolioSelected}
-                setPortfolioSelected={setPortfolioSelected}
-                contactSelected={contactSelected}
-                setContactSelected={setContactSelected}
-                resumeSelected={resumeSelected}
-                setResumeSelected={setResumeSelected}
+              currentTab={currentTab}
+              setCurrentTab={setCurrentTab}
             ></Header>
             <main>
                {renderTab()}
